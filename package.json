@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-2017",
+  "version": "0.0.1",
+  "description": "My personal portfolio website created at the beginning of 2017",
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "author": "Jacob Boykin",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.2.0"
+  }
+}
