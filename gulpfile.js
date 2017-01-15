@@ -29,7 +29,7 @@ gulp.task('browser-sync', function() {
   browserSync.init({
     ui: false,
     server: './public/',
-    files: ["./public/*.html", "./public/css/*.css"],
+    files: ['./public/*.html', './public/css/*.css'],
     notify: {
       styles: {
         top: 'auto',
