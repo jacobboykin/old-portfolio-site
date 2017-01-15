@@ -4,7 +4,7 @@
   "description": "My personal portfolio website created at the beginning of 2017",
   "repository": {
     "type": "git",
-    "url": "TODO"
+    "url": "https://github.com/jacobboykin/portfolio-2017"
   },
   "author": "Jacob Boykin",
   "devDependencies": {
