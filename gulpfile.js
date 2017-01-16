@@ -30,7 +30,7 @@ gulp.task('pug-watch', ['templates'], reload);
  * Sass task for live injecting into all browsers
  */
 gulp.task('sass', function () {
-    return gulp.src('./src/scss/*.scss')
+    return gulp.src('./src/scss/style.scss')
         .pipe(sass()).on('error', sass.logError)
         .pipe(gulp.dest('./public/css'))
         .pipe(reload({stream: true}));
@@ -44,6 +44,7 @@ gulp.task('default', ['sass', 'templates'], function () {
     browserSync({server: './public/'});
 
 
-    gulp.watch('./src/scss/**/*.scss', ['sass']);
+    gulp.watch('./src/scss/regions/*.scss', ['sass']);
+    gulp.watch('./src/scss/*.scss', ['sass']);
     gulp.watch('./src/pug/**/*.pug', ['pug-watch']);
 });
