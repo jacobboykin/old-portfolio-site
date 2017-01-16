@@ -1,68 +1,49 @@
-'use strict';
+var gulp        = require('gulp');
+var browserSync = require('browser-sync');
+var sass        = require('gulp-sass');
+var pug         = require('gulp-pug');
+var reload      = browserSync.reload;
 
-var gulp = require('gulp'),
-    pug = require('gulp-pug'),
-    browserSync = require('browser-sync').create();
+/**
+ * Compile pug files into HTML
+ */
+gulp.task('templates', function() {
 
+    var YOUR_LOCALS = {
+        "message": "This app is powered by gulp.pug recipe for BrowserSync"
+    };
 
-/* ================
-// Compile Pug
-// ============= */
-
-gulp.task('pug', function() {
-
-  return gulp.src('src/pug/index.pug')
-  .pipe(pug({
-    pretty: true
-  }))
-  .pipe(gulp.dest('./public/'));
-
+    return gulp.src('./src/pug/*.pug')
+        .pipe(pug({
+            locals: YOUR_LOCALS
+        }))
+        .pipe(gulp.dest('./public/'));
 });
 
+/**
+ * Important!!
+ * Separate task for the reaction to `.pug` files
+ */
+gulp.task('pug-watch', ['templates'], reload);
 
-/* ================
-// Sync Changes
-// ============= */
-
-gulp.task('browser-sync', function() {
-
-  browserSync.init({
-    ui: false,
-    server: './public/',
-    files: ['./public/*.html', './public/css/*.css'],
-    notify: {
-      styles: {
-        top: 'auto',
-        bottom: '0',
-        padding: '4px',
-        fontSize: '12px',
-        borderBottomLeftRadius: '0'
-      }
-    }
-  });
-
+/**
+ * Sass task for live injecting into all browsers
+ */
+gulp.task('sass', function () {
+    return gulp.src('./src/scss/*.scss')
+        .pipe(sass()).on('error', sass.logError)
+        .pipe(gulp.dest('./public/css'))
+        .pipe(reload({stream: true}));
 });
 
+/**
+ * Serve and watch the scss/pug files for changes
+ */
+gulp.task('default', ['sass', 'templates'], function () {
 
-/* ================
-// Watch Files
-// ============= */
+    browserSync({server: './public/'});
 
-gulp.task('watch', function() {
 
-  gulp.watch(['src/pug/**/*.pug'], ['pug']);
-
+    gulp.watch('./src/scss/**/*.scss', ['sass']);
+    gulp.watch('./src/pug/**/*.pug', ['pug-watch']);
 });
-
-
-/* ================
-// Gulp Task Sets
-// ============= */
-
-gulp.task('build', ['pug']);
-
-gulp.task('default', [
-  'build',
-  'watch',
-  'browser-sync'
-]);

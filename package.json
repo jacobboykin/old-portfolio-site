@@ -8,9 +8,9 @@
   },
   "author": "Jacob Boykin",
   "devDependencies": {
+    "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
     "gulp-pug": "^3.2.0",
-    "browser-sync": "^2.18.6",
     "gulp-sass": "^3.1.0"
   }
 }
