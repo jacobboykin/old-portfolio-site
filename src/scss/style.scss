@@ -1,3 +1,7 @@
-body {
-  background: red;
-}
+@import 'vendor/_normalize.scss';
+@import '_variables.scss';
+
+@import '_base.scss';
+@import 'regions/_header.scss';
+@import 'regions/_portfolio.scss';
+@import 'regions/_contact.scss';
