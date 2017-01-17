@@ -1,11 +1,33 @@
 header {
 
+  padding: 50px 20px 10px 20px;
+
+  img {
+    height: 32px;
+    margin: .67em 0;
+    float: left;
+  }
+
   h1 {
-    font-family: $font-header;
-    text-transform: lowercase;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1em;
+    font-weight: 900;
+    line-height: 32px;
+    margin: .67em 0 2.5em .8em;
+    float: left;
   }
 
   p {
-    font-size: 1.7em;
+    font-size: 2em;
+    clear: both;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px dotted $font-main-color;
+    }
+
   }
+
 }
