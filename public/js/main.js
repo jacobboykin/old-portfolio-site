@@ -3,7 +3,7 @@ var ticking = false;
 var header = document.getElementsByTagName('header');
 
 function doSomething(scroll_pos) {
-  if (scroll_pos >= 64) {
+  if (scroll_pos >= 50) {
     header[0].className = 'sticky-header';
   }
   else {
