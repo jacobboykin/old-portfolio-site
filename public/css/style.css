@@ -407,12 +407,24 @@ body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 300; }
 
+.grow {
+  transition: all .2s ease-in-out; }
+
+.grow:hover {
+  transform: scale(1.1); }
+
 header {
-  padding: 50px 20px 10px 20px; }
+  width: 100%;
+  height: 108px;
+  padding: 20px 20px 10px 20px;
+  transition: all .5s ease;
+  height: 50px; }
   header img {
     height: 32px;
     margin: .67em 0;
-    float: left; }
+    color: #6ED3CF;
+    float: left;
+    animation: rotating 3s linear infinite; }
   header h1 {
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -421,24 +433,40 @@ header {
     line-height: 32px;
     margin: .67em 0 2.5em .8em;
     float: left; }
-  header p {
-    font-size: 2em;
-    clear: both; }
-    header p a {
-      text-decoration: none;
-      color: inherit;
-      border-bottom: 1px dotted #585858; }
+
+.sticky-header {
+  background: #fff;
+  top: 0;
+  padding: 5px;
+  z-index: 999; }
+
+p {
+  font-size: 2em;
+  padding: 140px 20px 0 20px;
+  clear: both; }
+  p a {
+    text-decoration: none;
+    color: #9068BE;
+    border-bottom: 1px dotted #9068BE; }
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 .portfolio {
   list-style: none;
-  padding: 0 20px;
+  padding: 20px;
   margin: 0;
-  color: #fff;
+  background: #E1E8F0;
+  color: #E1E8F0;
   font-weight: 700;
   text-transform: uppercase; }
   .portfolio a {
-    background: #585858 no-repeat center center;
-    background-size: cover;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     width: 100%;
     height: 330px;
     margin: 20px 0;
@@ -446,9 +474,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all .2s ease-in-out; }
-  .portfolio a:hover {
-    transform: scale(1.1); }
+    border-radius: 3px; }
   .portfolio a,
   .portfolio a:visited,
   .portfolio a:active,
@@ -467,8 +493,35 @@ header {
   .portfolio a:hover p {
     visibility: visible;
     opacity: 1; }
+  .portfolio .twitch {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), url("../img/twitchtv.png"); }
+  .portfolio .wikipedia {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), url("../img/wikipedia.png"); }
+  .portfolio .local-weather {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), url("../img/local-weather.png"); }
+  .portfolio .random-quote {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), url("../img/random-quote.png"); }
+  .portfolio .placeholder {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), #585858; }
 
 footer {
-  background: #F6F6F6; }
+  text-align: center; }
+  footer ul {
+    list-style: none;
+    padding: 36px 0 20px 0; }
+  footer li {
+    margin: 0 1em;
+    width: 10%;
+    display: inline-block; }
   footer p {
-    margin: 0; }
+    background: #E62739;
+    color: #fff;
+    margin: 0;
+    padding: 20px 0; }
+  footer .social-item i {
+    color: #6ED3CF;
+    font-size: 40px; }
+  footer .madeby-icons {
+    font-size: 16px;
+    vertical-align: middle;
+    margin: 0 3px; }
