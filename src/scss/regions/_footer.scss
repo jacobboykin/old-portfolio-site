@@ -1,0 +1,32 @@
+footer {
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding: 36px 0 20px 0;
+  }
+
+  li {
+    margin: 0 1em;
+    width: 10%;
+    display: inline-block;
+  }
+
+  p {
+    background: $red;
+    color: $white;
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .social-item i {
+    color: $blue;
+    font-size: 40px;
+  }
+
+  .madeby-icons {
+    font-size: 16px;
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+}
