@@ -1,11 +1,16 @@
 header {
-
-  padding: 50px 20px 10px 20px;
+  width: 100%;
+  height: 108px;
+  padding: 20px 20px 10px 20px;
+  transition: all .5s ease;
+  height: 50px;
 
   img {
     height: 32px;
     margin: .67em 0;
+    color: $blue;
     float: left;
+    animation: rotating 3s linear infinite;
   }
 
   h1 {
@@ -17,17 +22,32 @@ header {
     margin: .67em 0 2.5em .8em;
     float: left;
   }
+}
 
-  p {
-    font-size: 2em;
-    clear: both;
+.sticky-header {
+  background: $white;
+  top: 0;
+  padding: 5px;
+  z-index: 999;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-      border-bottom: 1px dotted $font-main-color;
-    }
+p {
+  font-size: 2em;
+  padding: 140px 20px 0 20px;
+  clear: both;
 
+  a {
+    text-decoration: none;
+    color: $purple;
+    border-bottom: 1px dotted $purple;
   }
+}
 
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

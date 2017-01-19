@@ -1,15 +1,17 @@
 .portfolio {
   list-style: none;
-  padding: 0 20px;
+  padding: 20px;
   margin: 0;
-  color: $font-portfolio-color;
+  background: $gray;
+  color: $gray;
   font-weight: 700;
   text-transform: uppercase;
 
 
   a {
-    background: #585858 no-repeat center center;
-    background-size: cover;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     width: 100%;
     height: 330px;
     margin: 20px 0;
@@ -17,11 +19,7 @@
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    transition: all .2s ease-in-out;
-  }
-
-  a:hover {
-    transform: scale(1.1);
+    border-radius: 3px;
   }
 
   a,
@@ -46,6 +44,46 @@
   a:hover p {
     visibility: visible;
     opacity: 1;
+  }
+
+  .twitch {
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, .45),
+        rgba(0, 0, 0, .8)),
+      url('../img/twitchtv.png');
+  }
+
+  .wikipedia {
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, .45),
+        rgba(0, 0, 0, .8)),
+      url('../img/wikipedia.png');
+  }
+
+  .local-weather {
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, .45),
+        rgba(0, 0, 0, .8)),
+      url('../img/local-weather.png');
+  }
+
+  .random-quote {
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, .45),
+        rgba(0, 0, 0, .8)),
+      url('../img/random-quote.png');
+  }
+
+  .placeholder {
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, .45),
+        rgba(0, 0, 0, .8)),
+      $dark-gray;
   }
 
 }
