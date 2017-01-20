@@ -1,0 +1,29 @@
+@media (min-width: 980px) {
+  header {
+    img {
+      height: 45px;
+    }
+
+    h1 {
+      margin-top: 20px;
+    }
+  }
+
+  .portfolio {
+
+    background: $white;
+
+    li {
+
+      max-width: 30%;
+      margin: 10px 10px;
+    }
+  }
+
+  header,
+  .portfolio,
+  footer {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
