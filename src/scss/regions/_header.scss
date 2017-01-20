@@ -1,45 +1,31 @@
 header {
-
   padding: 50px 20px 10px 20px;
 
   img {
-    height: 32px;
-    margin: .67em 0;
-    color: $blue;
     float: left;
+    margin: 11px 0;
+    height: 32px;
     animation: rotating 3s linear infinite;
   }
 
   h1 {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1em;
+    float: left;
+    margin: 11px 0 40px 13px;
+    font-size: inherit;
     font-weight: 900;
     line-height: 32px;
-    margin: .67em 0 2.5em .8em;
-    float: left;
+    text-transform: uppercase;
+    letter-spacing: 5px;
   }
 
   p {
-
-    font-size: 2em;
     clear: both;
+    font-size: 32px;
 
     a {
-      text-decoration: none;
       color: $purple;
+      text-decoration: none;
       border-bottom: 1px dotted $purple;
     }
-  }
-}
-
-
-
-@keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

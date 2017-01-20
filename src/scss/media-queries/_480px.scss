@@ -1,0 +1,17 @@
+@media (min-width: 480px) {
+  .portfolio {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      max-width: 45%;
+      margin: 6px;
+    }
+  }
+
+  footer {
+    .social-item i {
+      font-size: 40px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@media (min-width: 1280px) {
+
+  body {
+    font-size: 20px;
+  }
+
+  header {
+    img {
+      height: 60px;
+    }
+
+    h1 {
+      line-height: 60px;
+    }
+  }
+
+  footer {
+    .social-item i {
+      font-size: 50px;
+    }
+  }
+
+  header,
+  ul {
+    max-width: 1200px;
+  }
+}

@@ -2,6 +2,16 @@ body {
   color: $dark-gray;
   font-family: $font-main;
   font-weight: 300;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background: $red;
+  color: $white;
 }
 
 .grow {
@@ -10,4 +20,13 @@ body {
 
 .grow:hover {
   transform: scale(1.05);
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

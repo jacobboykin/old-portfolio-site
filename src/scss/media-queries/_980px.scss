@@ -1,0 +1,23 @@
+@media (min-width: 980px) {
+  header {
+    img {
+      height: 45px;
+    }
+
+    h1 {
+      line-height: 45px;
+    }
+  }
+
+  .portfolio {
+    li {
+      max-width: 30%;
+    }
+  }
+
+  header,
+  ul {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
