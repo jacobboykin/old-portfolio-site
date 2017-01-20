@@ -43,6 +43,9 @@ gulp.task('default', ['sass', 'templates'], function () {
 
     browserSync({server: './public/'});
 
-    gulp.watch(['./src/scss/**/*.scss'], ['sass']);
+    gulp.watch(['./src/scss/media-queries/*.scss'], ['sass']);
+    gulp.watch(['./src/scss/regions/*.scss'], ['sass']);
+    gulp.watch(['./src/scss/vendor/*.scss'], ['sass']);
+    gulp.watch(['./src/scss/*.scss'], ['sass']);
     gulp.watch('./src/pug/**/*.pug', ['pug-watch']);
 });
