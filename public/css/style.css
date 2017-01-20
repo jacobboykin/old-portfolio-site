@@ -411,15 +411,10 @@ body {
   transition: all .2s ease-in-out; }
 
 .grow:hover {
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
 header {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  background: #fff;
-  width: 100%;
-  height: 50px; }
+  padding: 50px 20px 10px 20px; }
   header img {
     height: 32px;
     margin: .67em 0;
@@ -434,22 +429,13 @@ header {
     line-height: 32px;
     margin: .67em 0 2.5em .8em;
     float: left; }
-
-.sticky-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-left: 20px;
-  z-index: 999; }
-
-p {
-  font-size: 2em;
-  padding: 132px 20px 0 20px;
-  clear: both; }
-  p a {
-    text-decoration: none;
-    color: #9068BE;
-    border-bottom: 1px dotted #9068BE; }
+  header p {
+    font-size: 2em;
+    clear: both; }
+    header p a {
+      text-decoration: none;
+      color: #9068BE;
+      border-bottom: 1px dotted #9068BE; }
 
 @keyframes rotating {
   from {
@@ -465,46 +451,14 @@ p {
   color: #E1E8F0;
   font-weight: 700;
   text-transform: uppercase; }
-  .portfolio a {
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    width: 100%;
-    height: 330px;
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .portfolio ul {
+    padding: 0; }
+  .portfolio li {
+    max-width: 100%;
+    margin: 20px auto;
     border-radius: 3px; }
-  .portfolio a,
-  .portfolio a:visited,
-  .portfolio a:active,
-  .portfolio a:hover {
-    color: inherit;
-    text-decoration: none; }
-  .portfolio p {
-    visibility: hidden;
-    opacity: 0;
-    transition: all .2s ease-in-out;
-    font-weight: 300;
-    text-transform: none;
-    margin: 10px 0;
-    width: 85%;
-    text-align: center; }
-  .portfolio a:hover p {
-    visibility: visible;
-    opacity: 1; }
-  .portfolio .twitch {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), url("../img/twitchtv.png"); }
-  .portfolio .wikipedia {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), url("../img/wikipedia.png"); }
-  .portfolio .local-weather {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), url("../img/local-weather.png"); }
-  .portfolio .random-quote {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), url("../img/random-quote.png"); }
-  .portfolio .placeholder {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.8)), #585858; }
+    .portfolio li img {
+      max-width: 100%; }
 
 footer {
   text-align: center; }
@@ -516,14 +470,62 @@ footer {
     width: 10%;
     display: inline-block; }
   footer p {
-    background: #E62739;
+    background: #6ED3CF;
     color: #fff;
     margin: 0;
     padding: 20px 0; }
   footer .social-item i {
-    color: #6ED3CF;
+    color: #9068BE;
     font-size: 40px; }
   footer .madeby-icons {
     font-size: 16px;
     vertical-align: middle;
     margin: 0 3px; }
+
+@media (min-width: 480px) {
+  .portfolio {
+    text-align: center; }
+    .portfolio li {
+      display: inline-block;
+      max-width: 47%;
+      margin: 5px 5px; } }
+
+@media (min-width: 736px) {
+  header p {
+    font-size: 2.5em; } }
+
+@media (min-width: 980px) {
+  header img {
+    height: 45px; }
+  header h1 {
+    margin-top: 20px; }
+  .portfolio {
+    background: #fff; }
+    .portfolio li {
+      max-width: 30%;
+      margin: 10px 10px; }
+  header,
+  .portfolio,
+  footer {
+    max-width: 1000px;
+    margin: 0 auto; } }
+
+@media (min-width: 1280px) {
+  body {
+    font-size: 1.22em; }
+  header img {
+    height: 60px; }
+  header h1 {
+    margin-top: 30px; }
+  header,
+  .portfolio,
+  footer {
+    max-width: 1200px; } }
+
+@media (min-width: 1680px) {
+  body {
+    font-size: 1.4em; }
+  header,
+  .portfolio,
+  footer {
+    max-width: 1400px; } }
