@@ -7,83 +7,17 @@
   font-weight: 700;
   text-transform: uppercase;
 
+  ul {
+    padding: 0;
+  }
 
-  a {
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    width: 100%;
-    height: 330px;
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
+  li {
+    max-width: 100%;
+    margin: 20px auto;
     border-radius: 3px;
-  }
 
-  a,
-  a:visited,
-  a:active,
-  a:hover {
-    color: inherit;
-    text-decoration: none;
+    img {
+      max-width: 100%;
+    }
   }
-
-  p {
-    visibility: hidden;
-    opacity: 0;
-    transition: all .2s ease-in-out;
-    font-weight: 300;
-    text-transform: none;
-    margin: 10px 0;
-    width: 85%;
-    text-align: center;
-  }
-
-  a:hover p {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .twitch {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, .45),
-        rgba(0, 0, 0, .8)),
-      url('../img/twitchtv.png');
-  }
-
-  .wikipedia {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, .45),
-        rgba(0, 0, 0, .8)),
-      url('../img/wikipedia.png');
-  }
-
-  .local-weather {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, .45),
-        rgba(0, 0, 0, .8)),
-      url('../img/local-weather.png');
-  }
-
-  .random-quote {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, .45),
-        rgba(0, 0, 0, .8)),
-      url('../img/random-quote.png');
-  }
-
-  .placeholder {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, .45),
-        rgba(0, 0, 0, .8)),
-      $dark-gray;
-  }
-
 }
