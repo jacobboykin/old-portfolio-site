@@ -30,3 +30,9 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+@keyframes animatedBackground {
+  100%{
+    background-position:0px -3000px;
+  }
+}
