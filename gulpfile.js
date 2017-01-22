@@ -53,5 +53,5 @@ gulp.task('default', ['sass', 'images', 'templates'], function () {
 
     gulp.watch(['./src/scss/**/*.scss'], ['sass']);
     gulp.watch('./src/pug/**/*.pug', ['pug-watch']);
-    gulp.watch(['./src/img/**/*'], reload);
+    gulp.watch(['./src/img/**/*'], ['images', reload]);
 });
