@@ -12,7 +12,7 @@ var reload       = browserSync.reload;
 gulp.task('images', function() {
   return gulp.src('./src/img/*')
       .pipe(imagemin())
-      .pipe(gulp.dest('./public/img'))
+      .pipe(gulp.dest('./img'))
 });
 
 
@@ -23,7 +23,7 @@ gulp.task('templates', function() {
 
     return gulp.src('./src/pug/*.pug')
         .pipe(pug())
-        .pipe(gulp.dest('./public/'));
+        .pipe(gulp.dest('./'));
 });
 
 /**
@@ -38,7 +38,7 @@ gulp.task('sass', function () {
     return gulp.src('./src/scss/style.scss')
         .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
         .pipe(autoprefixer())
-        .pipe(gulp.dest('./public/css'))
+        .pipe(gulp.dest('./css'))
         .pipe(reload({stream: true}));
 });
 
@@ -49,7 +49,7 @@ gulp.task('sass', function () {
  */
 gulp.task('default', ['sass', 'images', 'templates'], function () {
 
-    browserSync({server: './public/'});
+    browserSync({server: './'});
 
     gulp.watch(['./src/scss/**/*.scss'], ['sass']);
     gulp.watch('./src/pug/**/*.pug', ['pug-watch']);
