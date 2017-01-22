@@ -3,7 +3,18 @@ var browserSync  = require('browser-sync');
 var sass         = require('gulp-sass');
 var pug          = require('gulp-pug');
 var autoprefixer = require('gulp-autoprefixer');
+var imagemin     = require('gulp-imagemin');
 var reload       = browserSync.reload;
+
+/**
+ * Optimize images
+ */
+gulp.task('images', function() {
+  return gulp.src('./src/img/*')
+      .pipe(imagemin())
+      .pipe(gulp.dest('./public/img'))
+});
+
 
 /**
  * Compile pug files into HTML
@@ -16,7 +27,6 @@ gulp.task('templates', function() {
 });
 
 /**
- * Important!!
  * Separate task for the reaction to `.pug` files
  */
 gulp.task('pug-watch', ['templates'], reload);
@@ -37,10 +47,11 @@ gulp.task('sass', function () {
 /**
  * Serve and watch the scss/pug files for changes
  */
-gulp.task('default', ['sass', 'templates'], function () {
+gulp.task('default', ['sass', 'images', 'templates'], function () {
 
     browserSync({server: './public/'});
 
     gulp.watch(['./src/scss/**/*.scss'], ['sass']);
     gulp.watch('./src/pug/**/*.pug', ['pug-watch']);
+    gulp.watch(['./src/img/**/*'], reload);
 });
