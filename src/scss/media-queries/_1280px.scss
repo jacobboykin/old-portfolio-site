@@ -18,6 +18,16 @@
     .social-item img {
       width: 50px;
     }
+
+    p {
+      :first-child {
+        width: 16px;
+      }
+
+      img {
+        width: 14px;
+      }
+    }
   }
 
   header,

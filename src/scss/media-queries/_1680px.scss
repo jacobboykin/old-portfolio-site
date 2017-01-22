@@ -8,4 +8,16 @@
   ul {
     max-width: 1400px;
   }
+
+  footer {
+    p {
+      :first-child {
+        width: 18px;
+      }
+
+      img {
+        width: 16px;
+      }
+    }
+  }
 }

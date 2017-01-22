@@ -27,11 +27,14 @@ footer {
     color: $white;
     margin: 0;
     padding: 20px 0;
-  }
 
-  .madeby-icons {
-    font-size: inherit;
-    vertical-align: middle;
-    margin: 0 3px;
+    :first-child {
+      width: 14px;
+    }
+
+    img {
+      width: 12px;
+      margin: 0 3px;
+    }
   }
 }
