@@ -1,10 +1,10 @@
 {
   "name": "portfolio-2017",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "My personal portfolio website created at the beginning of 2017",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacobboykin/portfolio-2017"
+    "url": "https://github.com/jacobboykin/jacobboykin.github.io"
   },
   "author": "Jacob Boykin",
   "devDependencies": {
